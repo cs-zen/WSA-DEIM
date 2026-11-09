@@ -1,0 +1,60 @@
+{
+  "dataset": "VisDrone2019-DET",
+  "task": "object detection in images",
+  "source": {
+    "repository": "https://huggingface.co/datasets/Voxel51/VisDrone2019-DET",
+    "upstream": "https://github.com/VisDrone/VisDrone-Dataset",
+    "git_commit": "3c3b9e9bd44c91121c1fc19fce428f0e6b71bba2",
+    "samples_json_sha256": "45777883b6b95fe504dfa59e963955190ad07c2714677bd3dd31b730036f4d82",
+    "samples_json_bytes": 118486295,
+    "lfs_fsck": "OK"
+  },
+  "format": "COCO detection JSON; images copied or linked by preparation utility",
+  "classes": [
+    "pedestrian",
+    "people",
+    "bicycle",
+    "car",
+    "van",
+    "truck",
+    "tricycle",
+    "awning-tricycle",
+    "bus",
+    "motor"
+  ],
+  "conversion_policy": {
+    "excluded_source_labels": [
+      "ignore_regions",
+      "others"
+    ],
+    "excluded_invalid_geometry": "non-positive width or height"
+  },
+  "splits": {
+    "train": {
+      "images": 6471,
+      "annotations": 343204,
+      "dropped_ignore_regions": 8813,
+      "dropped_others": 1532,
+      "dropped_degenerate_boxes": 1
+    },
+    "val": {
+      "images": 548,
+      "annotations": 38759,
+      "dropped_ignore_regions": 1378,
+      "dropped_others": 32,
+      "dropped_degenerate_boxes": 0
+    },
+    "test-dev": {
+      "images": 1610,
+      "annotations": 75102,
+      "dropped_ignore_regions": 2180,
+      "dropped_others": 265,
+      "dropped_degenerate_boxes": 0
+    }
+  },
+  "annotation_sha256": {
+    "instances_train.json": "12ff471728023f373658512dad7f5242b43a3766f3148efb269d773af514a7d0",
+    "instances_val.json": "a2000ea56100bddb2c045e5618b1167a0db80dcb5dd565d79768896749b36055",
+    "instances_test-dev.json": "92efbc2401d64f857cd5140854aa8c14c443ce43c06aa7bab0eefd193ed178e2"
+  }
+}
